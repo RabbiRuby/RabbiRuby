@@ -1,0 +1,15 @@
+// Grid system 12 cols
+$gutter-width: 1.5em
+
+.grid-container
+  +container
+
+// All column widths, non-omegas
+@for $i from 1 through 12
+  .col-#{$i}
+    +span-columns($i, 12)
+
+// Omegas
+@for $i from 1 through 12
+  .col-#{$i}-o
+    +span-columns($i omega, 12)
